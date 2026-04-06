@@ -67,3 +67,4 @@ public class Main {
         System.out.println("Edad actualizada: " + persona1.getEdad());
     }
 }
+//prueba de comprobacion de problema ssh
