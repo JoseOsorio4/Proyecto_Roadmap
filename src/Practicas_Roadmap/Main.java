@@ -6,7 +6,8 @@ public class Main {
         ejercicioEnum();
         ejercicioInitializerBlock();
         ejercicioBloques();
-        ejercicioEncapsulacion(); // 👈 agregamos esto
+        ejercicioEncapsulacion();
+        ejercicioPasoPorValorYReferencia();
     }
 
     private static void ejercicioEnum() {
@@ -50,7 +51,6 @@ public class Main {
         obj2.mostrarDatos();
     }
 
-    // 
     private static void ejercicioEncapsulacion() {
 
         PersonaEncapsulacion persona1 = new PersonaEncapsulacion("Jose", 26);
@@ -66,5 +66,33 @@ public class Main {
         System.out.println("Nombre actualizado: " + persona1.getNombre());
         System.out.println("Edad actualizada: " + persona1.getEdad());
     }
+
+    
+    private static void ejercicioPasoPorValorYReferencia() {
+
+        System.out.println("\n===== PASO POR VALOR Y REFERENCIA =====");
+
+        // PRIMITIVOS
+        int x = 1;
+        int y = 2;
+
+        System.out.println("Antes (primitivos): x=" + x + ", y=" + y);
+
+        EjemplopasoporReferenciayporValor.modificarPrimitivos(x, y);
+
+        System.out.println("Después (primitivos): x=" + x + ", y=" + y);
+
+        // OBJETOS
+        EjemplopasoporReferenciayporValor a =
+                new EjemplopasoporReferenciayporValor(1);
+
+        EjemplopasoporReferenciayporValor b =
+                new EjemplopasoporReferenciayporValor(1);
+
+        System.out.println("\nAntes (objetos): a=" + a.num + ", b=" + b.num);
+
+        EjemplopasoporReferenciayporValor.modificarObjetos(a, b);
+
+        System.out.println("Después (objetos): a=" + a.num + ", b=" + b.num);
+    }
 }
-//prueba de comprobacion de problema ssh
