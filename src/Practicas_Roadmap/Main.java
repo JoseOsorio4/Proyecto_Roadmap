@@ -8,6 +8,7 @@ public class Main {
         ejercicioBloques();
         ejercicioEncapsulacion();
         ejercicioPasoPorValorYReferencia();
+        ejercicioAtributosYMetodos(); 
     }
 
     private static void ejercicioEnum() {
@@ -67,12 +68,10 @@ public class Main {
         System.out.println("Edad actualizada: " + persona1.getEdad());
     }
 
-    
     private static void ejercicioPasoPorValorYReferencia() {
 
         System.out.println("\n===== PASO POR VALOR Y REFERENCIA =====");
 
-        // PRIMITIVOS
         int x = 1;
         int y = 2;
 
@@ -82,7 +81,6 @@ public class Main {
 
         System.out.println("Después (primitivos): x=" + x + ", y=" + y);
 
-        // OBJETOS
         EjemplopasoporReferenciayporValor a =
                 new EjemplopasoporReferenciayporValor(1);
 
@@ -94,5 +92,26 @@ public class Main {
         EjemplopasoporReferenciayporValor.modificarObjetos(a, b);
 
         System.out.println("Después (objetos): a=" + a.num + ", b=" + b.num);
+    }
+
+    private static void ejercicioAtributosYMetodos() {
+
+        System.out.println("\n===== ATRIBUTOS Y MÉTODOS =====");
+
+        PersonaAtributosYmetodos persona1 =
+                new PersonaAtributosYmetodos("Jose", 26);
+
+        persona1.mostrarDatos();
+
+        System.out.println("-----");
+
+        persona1.cumplirAnios();
+
+        System.out.println("-----");
+
+        persona1.setNombre("Carlos");
+        persona1.setEdad(30);
+
+        persona1.mostrarDatos();
     }
 }
