@@ -8,7 +8,9 @@ public class Main {
         ejercicioBloques();
         ejercicioEncapsulacion();
         ejercicioPasoPorValorYReferencia();
-        ejercicioAtributosYMetodos(); 
+        ejercicioAtributosYMetodos();
+        ejercicioAnimal(); 
+        ejercicioClasesYObjetos();
     }
 
     private static void ejercicioEnum() {
@@ -113,5 +115,35 @@ public class Main {
         persona1.setEdad(30);
 
         persona1.mostrarDatos();
+    }
+
+    private static void ejercicioAnimal() {
+
+        System.out.println("\n===== HERENCIA ANIMAL =====");
+
+        Gato gato = new Gato(false, "leche", 4, "negro");
+
+        System.out.println("¿Es vegetariano? " + gato.isVegetariano());
+        System.out.println("Come: " + gato.getComida());
+        System.out.println("Número de patas: " + gato.getNumeroPatas());
+        System.out.println("Color: " + gato.getColor());
+
+        System.out.println("\n--- Método sobrescrito ---");
+        gato.mostrarInfo();
+    }
+    private static void ejercicioClasesYObjetos() {
+
+        System.out.println("\n===== CLASES Y OBJETOS =====");
+
+        Lampara led = new Lampara();
+        Lampara halogena = new Lampara();
+
+        led.encender();
+        halogena.apagar();
+
+        System.out.println("-----");
+
+        led.mostrarEstado();
+        halogena.mostrarEstado();
     }
 }
