@@ -11,6 +11,8 @@ public class Main {
         ejercicioAtributosYMetodos();
         ejercicioAnimal(); 
         ejercicioClasesYObjetos();
+        ejercicioTransporte();//Polimorfismo
+
     }
 
     private static void ejercicioEnum() {
@@ -146,4 +148,12 @@ public class Main {
         led.mostrarEstado();
         halogena.mostrarEstado();
     }
+    private static void ejercicioTransporte() { //Polimorfismo
+
+         System.out.println("-----");
+    	 System.out.println("Transporte");
+         Transporte transporte = new Avion();
+         transporte.movimiento();
+    }
+
 }
