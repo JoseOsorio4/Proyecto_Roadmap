@@ -12,6 +12,7 @@ public class Main {
         ejercicioAnimal(); 
         ejercicioClasesYObjetos();
         ejercicioTransporte();//Polimorfismo
+        ejercicioOverloadingYOverriding();
 
     }
 
@@ -155,5 +156,19 @@ public class Main {
          Transporte transporte = new Avion();
          transporte.movimiento();
     }
+    	private static void ejercicioOverloadingYOverriding() {
 
+    	    System.out.println("OverloadinYoverriding");
+
+    	    Moto moto = new Moto();
+
+    	    moto.encender();
+
+    	    moto.acelerar();
+
+    	    moto.acelerar(80);
+
+    	    moto.acelerar("Sport");
+    	
+    }
 }
