@@ -3,20 +3,23 @@ package Practicas_Roadmap;
 public class Main {
 
     public static void main(String[] args) {
+
         ejercicioEnum();
         ejercicioInitializerBlock();
         ejercicioBloques();
         ejercicioEncapsulacion();
         ejercicioPasoPorValorYReferencia();
         ejercicioAtributosYMetodos();
-        ejercicioAnimal(); 
+        ejercicioAnimal();
         ejercicioClasesYObjetos();
-        ejercicioTransporte();//Polimorfismo
+        ejercicioTransporte(); // Polimorfismo
         ejercicioOverloadingYOverriding();
-
+        ejercicioArrayList(); // ArrayList
+        ejercicioExceptionHandling(); // Exception Handling
     }
 
     private static void ejercicioEnum() {
+
         Dias dia = Dias.LUNES;
 
         if (dia == Dias.SABADO || dia == Dias.DOMINGO) {
@@ -27,6 +30,7 @@ public class Main {
     }
 
     private static void ejercicioInitializerBlock() {
+
         estudiante estudiante1 = new estudiante("Jose", "Osorio", 26);
         estudiante1.asignarMaterias("Fisica 1", "Progra 1", "Ingles Intermedio", "Calculo 1");
 
@@ -46,6 +50,7 @@ public class Main {
     }
 
     private static void ejercicioBloques() {
+
         System.out.println("Inicio del main");
 
         EjemploBloques obj1 = new EjemploBloques();
@@ -134,6 +139,7 @@ public class Main {
         System.out.println("\n--- Método sobrescrito ---");
         gato.mostrarInfo();
     }
+
     private static void ejercicioClasesYObjetos() {
 
         System.out.println("\n===== CLASES Y OBJETOS =====");
@@ -149,26 +155,63 @@ public class Main {
         led.mostrarEstado();
         halogena.mostrarEstado();
     }
-    private static void ejercicioTransporte() { //Polimorfismo
 
-         System.out.println("-----");
-    	 System.out.println("Transporte");
-         Transporte transporte = new Avion();
-         transporte.movimiento();
+    private static void ejercicioTransporte() { // Polimorfismo
+
+        System.out.println("-----");
+        System.out.println("Transporte");
+
+        Transporte transporte = new Avion();
+        transporte.movimiento();
     }
-    	private static void ejercicioOverloadingYOverriding() {
 
-    	    System.out.println("OverloadinYoverriding");
+    private static void ejercicioOverloadingYOverriding() {
 
-    	    Moto moto = new Moto();
+        System.out.println("\n===== OVERLOADING Y OVERRIDING =====");
 
-    	    moto.encender();
+        Moto moto = new Moto();
 
-    	    moto.acelerar();
+        moto.encender();
 
-    	    moto.acelerar(80);
+        moto.acelerar();
 
-    	    moto.acelerar("Sport");
-    	
+        moto.acelerar(80);
+
+        moto.acelerar("Sport");
+    }
+
+    private static void ejercicioArrayList() {
+
+        System.out.println("\n===== ARRAYLIST =====");
+
+        ArrayListEjemplo lista = new ArrayListEjemplo();
+
+        lista.agregarEstudiante("Jose");
+        lista.agregarEstudiante("Briana");
+        lista.agregarEstudiante("Sara");
+        lista.agregarEstudiante("Carlos");
+
+        System.out.println("\nBuscando estudiante:");
+        lista.buscarEstudiante("Jose");
+
+        System.out.println("\nEliminando estudiante:");
+        lista.eliminarEstudiante("Sara");
+
+        System.out.println("\nMostrando lista:");
+        lista.mostrarEstudiantes();
+    }
+
+    private static void ejercicioExceptionHandling() {
+
+        System.out.println("\n===== EXCEPTION HANDLING =====");
+
+        EjemploExceptionHandling ejemplo =
+                new EjemploExceptionHandling();
+
+        ejemplo.dividir(20, 5);
+
+        System.out.println("-----");
+
+        ejemplo.dividir(20, 0);
     }
 }
