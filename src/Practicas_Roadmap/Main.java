@@ -4,19 +4,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ejercicioEnum();
-        ejercicioInitializerBlock();
-        ejercicioBloques();
-        ejercicioEncapsulacion();
-        ejercicioPasoPorValorYReferencia();
-        ejercicioAtributosYMetodos();
-        ejercicioAnimal();
-        ejercicioClasesYObjetos();
-        ejercicioTransporte(); // Polimorfismo
-        ejercicioOverloadingYOverriding();
-        ejercicioArrayList(); // ArrayList
-        ejercicioExceptionHandling(); // Exception Handling
-    }
+    	    ejercicioEnum(); // enums
+    	    ejercicioInitializerBlock(); // bloque de inicializacion, bloque estatico y bloque de instancia
+    	    ejercicioBloques(); // bloques de inicializacion, bloques estaticos y bloques de instancia
+    	    ejercicioEncapsulacion(); // encapsulacion
+    	    ejercicioPasoPorValorYReferencia(); // paso por valor y referencia
+    	    ejercicioAtributosYMetodos();// atributos y metodos
+    	    ejercicioAnimal();//herencia
+    	    ejercicioClasesYObjetos();// clases y objetos
+    	    ejercicioTransporte(); // Polimorfismo
+    	    ejercicioOverloadingYOverriding();
+    	    ejercicioArrayList(); // ArrayList
+    	    ejercicioExceptionHandling(); // Exception Handling
+    	    ejercicioAccessModifiers(); // Access Modifiers 
+    	}
+    
 
     private static void ejercicioEnum() {
 
@@ -214,4 +216,31 @@ public class Main {
 
         ejemplo.dividir(20, 0);
     }
+    private static void ejercicioAccessModifiers() {
+    	System.out.println("\n===== ACCESS MODIFIERS =====");
+
+        EstudianteAcceso estudiante =
+                new EstudianteAcceso(
+                        "Jose",
+                        26,
+                        "Guatemala",
+                        "20240001"
+                );
+
+        System.out.println("\n--- Datos iniciales ---");
+        estudiante.mostrarInformacion();
+
+        System.out.println("\n--- Modificando nombre con Setter ---");
+
+        estudiante.setNombre("Carlos");
+
+        System.out.println("Nombre actualizado: "
+                + estudiante.getNombre());
+
+        System.out.println("\n--- Accediendo a atributo public ---");
+
+        System.out.println("Pais: "
+                + estudiante.pais);
+    }
+    
 }
