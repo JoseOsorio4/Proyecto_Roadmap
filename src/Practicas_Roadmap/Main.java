@@ -16,7 +16,8 @@ public class Main {
     	    ejercicioOverloadingYOverriding();
     	    ejercicioArrayList(); // ArrayList
     	    ejercicioExceptionHandling(); // Exception Handling
-    	    ejercicioAccessModifiers(); // Access Modifiers 
+    	    ejercicioAccessModifiers(); // Access Modifiers
+    	    ejercicioGettersYSetters(); // Getters y Setters
     	}
     
 
@@ -222,6 +223,7 @@ public class Main {
         EstudianteAcceso estudiante =
                 new EstudianteAcceso(
                         "Jose",
+                        
                         26,
                         "Guatemala",
                         "20240001"
@@ -242,5 +244,22 @@ public class Main {
         System.out.println("Pais: "
                 + estudiante.pais);
     }
-    
+    private static void ejercicioGettersYSetters() {
+		System.out.println("\n===== GETTERS Y SETTERS =====");
+
+		CuentaBancaria cuenta =
+				new CuentaBancaria("Jose", 1000);
+
+		System.out.println("\n--- Datos iniciales ---");
+		cuenta.mostrarCuenta();
+
+		System.out.println("\n--- Modificando saldo con Setter ---");
+		cuenta.setSaldo(1500);
+
+		System.out.println("Saldo actualizado: "
+				+ cuenta.getSaldo());
+
+		System.out.println("\n--- Intentando asignar saldo negativo ---");
+		cuenta.setSaldo(-500);
+    } 
 }
